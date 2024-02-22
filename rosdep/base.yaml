@@ -856,6 +856,7 @@ dpkg:
   gentoo: [app-arch/dpkg]
   nixos: [dpkg]
   openembedded: [dpkg@openembedded-core]
+  rhel: [dpkg]
   ubuntu: [dpkg]
 dpkg-dev:
   debian: [dpkg-dev]
@@ -1021,13 +1022,16 @@ ffmpeg:
   arch: [ffmpeg]
   debian:
     '*': [ffmpeg, libavcodec-dev, libavformat-dev, libavutil-dev, libswscale-dev]
-  fedora: [ffmpeg-devel]
+  fedora: [ffmpeg-free-devel]
   freebsd: [ffmpeg]
   gentoo: [virtual/ffmpeg]
   macports: [ffmpeg]
   nixos: [ffmpeg]
   openembedded: [ffmpeg@openembedded-core]
   opensuse: [ffmpeg-4-libavcodec-devel, ffmpeg-4-libavdevice-devel, ffmpeg-4-libavfilter-devel, ffmpeg-4-libavformat-devel, ffmpeg-4-libavresample-devel, ffmpeg-4-libavutil-devel, ffmpeg-4-libpostproc-devel, ffmpeg-4-libswresample-devel, ffmpeg-4-libswscale-devel, ffmpeg-4-private-devel]
+  rhel:
+    '*': [ffmpeg-free-devel]
+    '8': null
   slackware: [ffmpeg]
   ubuntu:
     '*': [ffmpeg, libavcodec-dev, libavformat-dev, libavutil-dev, libswscale-dev]
@@ -1035,14 +1039,16 @@ ffmpeg-dev:
   alpine: [ffmpeg-dev]
   arch: [ffmpeg]
   debian: [libavcodec-dev, libavdevice-dev, libavfilter-dev, libavformat-dev, libavutil-dev, libpostproc-dev, libswresample-dev, libswscale-dev]
-  fedora: [ffmpeg-devel]
+  fedora: [ffmpeg-free-devel]
   freebsd: [ffmpeg]
   gentoo: [virtual/ffmpeg]
   macports: [ffmpeg]
   nixos: [ffmpeg]
   openembedded: [ffmpeg@openembedded-core]
   opensuse: [ffmpeg-4-libavcodec-devel, ffmpeg-4-libavdevice-devel, ffmpeg-4-libavfilter-devel, ffmpeg-4-libavformat-devel, ffmpeg-4-libavresample-devel, ffmpeg-4-libavutil-devel, ffmpeg-4-libpostproc-devel, ffmpeg-4-libswresample-devel, ffmpeg-4-libswscale-devel, ffmpeg-4-private-devel]
-  rhel: [ffmpeg-devel]
+  rhel:
+    '*': [ffmpeg-free-devel]
+    '8': null
   slackware: [ffmpeg]
   ubuntu: [libavcodec-dev, libavdevice-dev, libavfilter-dev, libavformat-dev, libavutil-dev, libpostproc-dev, libswresample-dev, libswscale-dev]
 ffmpeg2theora:
@@ -1909,8 +1915,10 @@ hdf5:
   ubuntu: [libhdf5-dev]
 hdf5-tools:
   debian: [hdf5-tools]
+  fedora: [hdf5]
   gentoo: [sci-libs/hdf5]
   nixos: [hdf5]
+  rhel: [hdf5]
   ubuntu: [hdf5-tools]
 hostapd:
   arch: [hostapd]
@@ -2367,6 +2375,7 @@ leveldb:
   gentoo: [dev-libs/leveldb]
   nixos: [leveldb]
   openembedded: [leveldb@meta-oe]
+  rhel: [leveldb-devel]
   ubuntu: [libleveldb-dev]
 lib32asound2:
   debian: [lib32asound2]
@@ -3115,6 +3124,7 @@ libdbus-dev:
   fedora: [dbus-devel]
   gentoo: [sys-apps/dbus]
   nixos: [dbus]
+  rhel: [dbus-devel]
   ubuntu: [libdbus-1-dev]
 libdc1394-dev:
   arch:
@@ -3217,6 +3227,14 @@ libedit-dev:
   nixos: [libedit]
   rhel: [libedit-devel]
   ubuntu: [libedit-dev]
+libepoxy-dev:
+  alpine: [libepoxy-dev]
+  arch: [libepoxy]
+  debian: [libepoxy-dev]
+  fedora: [libepoxy-devel]
+  opensuse: [libepoxy-devel]
+  rhel: [libepoxy-devel]
+  ubuntu: [libepoxy-dev]
 libesd0-dev:
   debian: [libesd0-dev]
   fedora: [esound-devel]
@@ -3794,6 +3812,7 @@ libhdf5-dev:
   gentoo: [sci-libs/hdf5]
   nixos: [hdf5]
   openembedded: [hdf5@meta-oe]
+  rhel: [hdf5-devel]
   ubuntu: [libhdf5-dev]
 libhidapi-dev:
   debian: [libhidapi-dev]
@@ -3974,6 +3993,9 @@ libjansson-dev:
   ubuntu: [libjansson-dev]
 libjaxp1.3-java:
   debian: [libjaxp1.3-java]
+libjchart2d-java:
+  debian: [libjchart2d-java]
+  ubuntu: [libjchart2d-java]
 libjpeg:
   arch: [libjpeg-turbo]
   debian: [libjpeg-dev]
@@ -4518,6 +4540,9 @@ libopenscenegraph:
   gentoo: [dev-games/openscenegraph]
   nixos: [openscenegraph]
   opensuse: [OpenSceneGraph, libOpenSceneGraph-devel, libOpenThreads-devel]
+  rhel:
+    '*': [OpenSceneGraph, OpenSceneGraph-devel, OpenThreads, OpenThreads-devel]
+    '8': null
   ubuntu: [openscenegraph, libopenscenegraph-dev]
 libopensplice67:
   gentoo: [=sci-libs/opensplice-6.7.*]
@@ -4554,6 +4579,17 @@ libopenvdb-dev:
     '*': [openvdb-devel]
     '7': null
   ubuntu: [libopenvdb-dev, libilmbase-dev]
+libopus-dev:
+  alpine: [opus-dev]
+  arch: [opus]
+  debian: [libopus-dev]
+  fedora: [opus-devel]
+  gentoo: [media-sound/opus]
+  macports: [opus]
+  nixos: [libopus]
+  opensuse: [libopus-devel]
+  rhel: [opus-devel]
+  ubuntu: [libopus-dev]
 liborocos-bfl:
   debian:
     '*': [liborocos-bfl0.8]
@@ -5280,6 +5316,9 @@ libqt4-sql-psql:
   macports: [qt4-mac]
   nixos: [qt4]
   ubuntu: [libqt4-sql-psql]
+libqt5-charts-dev:
+  debian: [libqt5charts5-dev]
+  ubuntu: [libqt5charts5-dev]
 libqt5-concurrent:
   arch: [qt5-base]
   debian: [libqt5concurrent5]
@@ -5737,9 +5776,12 @@ libsvn-dev:
 libswscale-dev:
   arch: [ffmpeg]
   debian: [libswscale-dev]
-  fedora: [ffmpeg-devel]
+  fedora: [libswscale-free-devel]
   gentoo: [virtual/ffmpeg]
   nixos: [ffmpeg]
+  rhel:
+    '*': [libswscale-free-devel]
+    '8': null
   ubuntu: [libswscale-dev]
 libsystemd-dev:
   debian: [libsystemd-dev]
@@ -6911,6 +6953,8 @@ opende:
   fedora: [ode-devel]
   gentoo: [dev-games/ode]
   nixos: [ode]
+  rhel:
+    '8': [ode-devel]
   ubuntu: [libode-dev]
 opengl:
   alpine: [mesa-dev]
@@ -7327,7 +7371,9 @@ qml-module-qtquick-dialogs:
   ubuntu: [qml-module-qtquick-dialogs]
 qml-module-qtquick-extras:
   debian: [qml-module-qtquick-extras]
+  fedora: [qt5-qtquickcontrols]
   gentoo: [dev-qt/qtquickcontrols]
+  rhel: [qt5-qtquickcontrols]
   ubuntu: [qml-module-qtquick-extras]
 qml-module-qtquick-layouts:
   debian: [qml-module-qtquick-layouts]
@@ -8566,6 +8612,7 @@ xterm:
   gentoo: [x11-terms/xterm]
   nixos: [xterm]
   openembedded: [xterm@meta-oe]
+  rhel: [xterm]
   ubuntu: [xterm]
 xulrunner-1.9.2:
   arch: [xulrunner]

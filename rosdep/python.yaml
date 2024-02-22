@@ -5519,6 +5519,7 @@ python3-distro:
   fedora: [python3-distro]
   gentoo: [dev-python/distro]
   nixos: [python3Packages.distro]
+  rhel: [python3-distro]
   ubuntu: [python3-distro]
 python3-distutils:
   debian:
@@ -6288,6 +6289,16 @@ python3-google-cloud-pubsub-pip:
   ubuntu:
     pip:
       packages: [google-cloud-pubsub]
+python3-google-cloud-secret-manager-pip:
+  debian:
+    pip:
+      packages: [google-cloud-secret-manager]
+  fedora:
+    pip:
+      packages: [google-cloud-secret-manager]
+  ubuntu:
+    pip:
+      packages: [google-cloud-secret-manager]
 python3-google-cloud-storage-pip: *migrate_eol_2025_04_30_python3_google_cloud_storage_pip
 python3-google-cloud-texttospeech-pip: *migrate_eol_2025_04_30_python3_google_cloud_texttospeech_pip
 python3-googleapi:
@@ -6324,6 +6335,7 @@ python3-graphviz:
   gentoo: [dev-python/graphviz]
   nixos: [python3Packages.graphviz]
   opensuse: [python3-graphviz]
+  rhel: [python3-pygraphviz]
   ubuntu: [python3-graphviz]
 python3-grip:
   debian:
@@ -6728,6 +6740,7 @@ python3-lttng:
   arch: [python-lttngust]
   debian: [python3-lttng]
   fedora: [python3-lttng]
+  nixos: [python3Packages.lttng]
   openembedded: [lttng-tools@openembedded-core]
   rhel:
     '*': [python3-lttng]
@@ -6927,6 +6940,26 @@ python3-more-itertools:
     '*': [python3-more-itertools]
     '7': null
   ubuntu: [python3-more-itertools]
+python3-moteus-pi3hat-pip:
+  debian:
+    pip:
+      packages: [moteus-pi3hat]
+  ubuntu:
+    pip:
+      packages: [moteus-pi3hat]
+python3-moteus-pip:
+  debian:
+    pip:
+      packages: [moteus]
+  fedora:
+    pip:
+      packages: [moteus]
+  osx:
+    pip:
+      packages: [moteus]
+  ubuntu:
+    pip:
+      packages: [moteus]
 python3-msgpack:
   debian:
     '*': [python3-msgpack]
@@ -7265,6 +7298,9 @@ python3-openai-pip:
   fedora:
     pip:
       packages: [openai]
+  rhel:
+    pip:
+      packages: [openai]
   ubuntu:
     pip:
       packages: [openai]
@@ -7297,6 +7333,20 @@ python3-openhsi-pip:
   ubuntu:
     pip:
       packages: [openhsi]
+python3-overrides:
+  arch: [python-overrides]
+  debian:
+    pip:
+      packages: [overrides]
+  fedora:
+    pip:
+      packages: [overrides]
+  osx:
+    pip:
+      packages: [overrides]
+  ubuntu:
+    pip:
+      packages: [overrides]
 python3-owlready2-pip:
   debian:
     pip:
@@ -7479,6 +7529,9 @@ python3-pkg-resources:
   rhel: ['python%{python3_pkgversion}-setuptools']
   ubuntu: [python3-pkg-resources]
 python3-playsound-pip:
+  alpine:
+    pip:
+      packages: [playsound]
   debian:
     pip:
       packages: [playsound]
@@ -8554,6 +8607,19 @@ python3-schema:
       packages: [schema]
   rhel: [python3-schema]
   ubuntu: [python3-schema]
+python3-scikit-spatial-pip:
+  debian:
+    pip:
+      packages: [scikit-spatial]
+  fedora:
+    pip:
+      packages: [scikit-spatial]
+  osx:
+    pip:
+      packages: [scikit-spatial]
+  ubuntu:
+    pip:
+      packages: [scikit-spatial]
 python3-scipy:
   arch: [python-scipy]
   debian: [python3-scipy]
@@ -8924,6 +8990,16 @@ python3-sqlalchemy-utils:
   nixos: [python3Packages.sqlalchemy-utils]
   opensuse: [python3-SQLAlchemy-Utils]
   ubuntu: [python3-sqlalchemy-utils]
+python3-sqlite-utils-pip:
+  debian:
+    pip:
+      packages: [sqlite-utils]
+  fedora:
+    pip:
+      packages: [sqlite-utils]
+  ubuntu:
+    pip:
+      packages: [sqlite-utils]
 python3-sqlmodel:
   debian:
     '*': [python3-sqlmodel]
@@ -9013,6 +9089,13 @@ python3-suas-interop-clients-pip:
   ubuntu:
     pip:
       packages: [suas-interop-clients]
+python3-svg.path:
+  alpine: [py3-svgpath]
+  debian: [python3-svg.path]
+  fedora: [python3-svg-path]
+  gentoo: [dev-python/svg-path]
+  nixos: [python311Packages.svg-path]
+  ubuntu: [python3-svg.path]
 python3-sympy:
   debian: [python3-sympy]
   fedora: [python3-sympy]
@@ -9043,6 +9126,7 @@ python3-tabulate:
   fedora: [python3-tabulate]
   gentoo: [dev-python/tabulate]
   nixos: [python3Packages.tabulate]
+  rhel: [python3-tabulate]
   ubuntu: [python3-tabulate]
 python3-tensorboardX-pip:
   debian:
@@ -9178,6 +9262,7 @@ python3-tqdm:
   osx:
     pip:
       packages: [tqdm]
+  rhel: [python3-tqdm]
   ubuntu:
     '*': [python3-tqdm]
 python3-transformers-pip:
@@ -9442,6 +9527,14 @@ python3-waitress:
   opensuse: [python3-waitress]
   rhel: [python3-waitress]
   ubuntu: [python3-waitress]
+python3-wand:
+  alpine: [py3-wand]
+  arch: [python-wand]
+  brew: [imagemagick]
+  debian: [python3-wand]
+  gentoo: [dev-python/wand]
+  nixos: [python311Packages.wand]
+  ubuntu: [python3-wand]
 python3-watchdog:
   debian: [python3-watchdog]
   fedora: [python3-watchdog]
